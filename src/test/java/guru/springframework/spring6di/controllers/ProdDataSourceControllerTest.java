@@ -7,15 +7,14 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles("EN")
+@ActiveProfiles("PROD")
 @SpringBootTest
-class MyI18NControllerENTest {
-    
-    @Autowired
-    private MyI18NController myI18NController;
+class ProdDataSourceControllerTest {
 
+    @Autowired
+    private DataSourceController dataSourceController;
     @Test
-    void sayHello() {
-        System.out.println(this.myI18NController.sayHello());
+    void getDataSource() {
+        System.out.println(this.dataSourceController.getDataSource());
     }
 }
